@@ -14,6 +14,18 @@ $(call inherit-product, device/oneplus/kebab/device.mk)
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    RISING_CHIPSET="Snapdragon 865 5G " \
+    RISING_MAINTAINER="E_C_J"
+
+# RisingOS Flags
+WITH_GMS := true
+# TARGET_CORE_GMS := true
+TARGET_ENABLE_BLUR := true
+TARGET_PREBUILT_PIXEL_LAUNCHER := false
+PRODUCT_NO_CAMERA := false
+TARGET_HAS_UDFPS := true
+
 PRODUCT_NAME := lineage_kebab
 PRODUCT_DEVICE := kebab
 PRODUCT_MANUFACTURER := OnePlus
